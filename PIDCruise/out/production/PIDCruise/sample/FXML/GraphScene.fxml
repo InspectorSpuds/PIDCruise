@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import sample.FXMLControllers.*?>
+
+<Pane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXMLControllers.GraphScene">
+    <VBox alignment="CENTER" layoutY="-1.0" prefHeight="600.0" prefWidth="600.0">
+        <GridPane alignment="CENTER" prefHeight="144.0" prefWidth="600.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="186.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="162.0" minWidth="10.0" prefWidth="96.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="164.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="153.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="205.0" text="Current Velocity: " textAlignment="CENTER" GridPane.halignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label fx:id="Curr_Veloc" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="76.0" text="Label" textAlignment="CENTER" textFill="#60aff7" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="146.0" text="Aim Velocity:" GridPane.columnIndex="2">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Spinner fx:id="Aim_Veloc" GridPane.columnIndex="3" />
+        </GridPane>
+        <GridPane alignment="CENTER" prefHeight="83.0" prefWidth="587.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="144.0" minWidth="0.0" prefWidth="28.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="348.0" minWidth="10.0" prefWidth="166.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="385.0" minWidth="0.0" prefWidth="22.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="9.0" prefWidth="179.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="33.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="172.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="69.0" text="P:" textAlignment="CENTER" />
+            <Spinner fx:id="P" prefHeight="14.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <cursor>
+                    <Cursor fx:constant="DEFAULT" />
+                </cursor>
+            </Spinner>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="18.0" text="I:" GridPane.columnIndex="2" />
+            <Spinner fx:id="I" prefHeight="7.0" prefWidth="149.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="D:" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Spinner fx:id="D" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+        </GridPane>
+      <Button mnemonicParsing="false" onMouseExited="#updateStats" text="Apply Changes" />
+    </VBox>
+</Pane>
